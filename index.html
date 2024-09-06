@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa da Frota</title>
+  <!-- Biblioteca para manipular CSV -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <!-- Biblioteca Leaflet para o mapa -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    #map { height: 600px; width: 100%; }
+  </style>
+</head>
+<body>
+  <h1>Mapa em Tempo Real dos Ônibus</h1>
+  <input type="text" id="buscaOnibus" placeholder="Buscar ônibus por código..." oninput="filtrarOnibus()">
+  <div id="map"></div>
+  <!-- Feedback visual em caso de erro -->
+  <div id="erro" style="color: red; display: none;">Erro ao carregar os dados. Tente novamente mais tarde.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
